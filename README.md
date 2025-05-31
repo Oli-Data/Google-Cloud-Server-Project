@@ -5,22 +5,16 @@ Fraud Detection Project
 Class: CIS 415 - Arizona State University
 
 Summary
+This project focused on using Google Cloud Platform (GCP) and PySpark to build and evaluate machine learning models, specifically Logistic Regression and Random Forest, for detecting and predicting fraud in large datasets.
 
-This project focused on utilizing Google Cloud Platform (GCP) and PySpark to build and compare machine learning models, specifically Logistic Regression and Random Forest, for accurately detecting and predicting cases of fraud in large datasets.
+Description
+For this project, I created two datasets: big_fraud_detection_dataset and small_fraud_detection_dataset, both generated with the help of ChatGPT. Due to its size, the large dataset is not included in this repository.
 
-In-Depth Description
+Workflow:
+	•	GCP Setup: I used professor-provided code to connect to GCP Cloud Storage, then customized it to integrate with my own buckets. I validated PySpark functionality in Google Colab before transitioning to Dataproc Jupyter.
+	•	Data Issues and Resolution: During the Spark conversion, I encountered missing values that were not expected. By dropping rows with missing data, I successfully converted the dataset to Spark format.
+	•	Model Development: I processed the data using text prompts and built both Logistic Regression and Random Forest models. I compared their performance to determine the best predictor for fraud cases.
+	•	Scaling: After testing on the small dataset, I deployed the same code to GCP Dataproc for larger-scale processing.
 
-For this project, I created two datasets, big_fraud_detection_dataset and small_fraud_detection_dataset, generated using ChatGPT. Due to its size, the large dataset is not included in this repository.
-
-The workflow involved the following steps:
-
-1. Setting Up GCP: I utilized code provided by my professor to connect to GCP’s Cloud Storage, where the datasets were stored. I modified the code to integrate with my specific buckets and ensured PySpark worked correctly in Google Colab before transitioning to GCP Dataproc Jupyter.
- 
-2. Data Issues and Resolution: While converting the dataset into Spark, I encountered issues where rows were not displaying properly. Initially suspecting a formatting issue, I discovered missing values in the dataset—despite specifying that there should be none during dataset creation. I resolved this by dropping rows with missing data, which enabled successful PySpark conversion.
- 
-3. Model Building: I processed the data using a text prompt with specific parameters and implemented two machine learning models: Logistic Regression and Random Forest. I compared their performance to determine which better predicted fraud cases.
- 
-4. Scaling Up: After validating the workflow on the smaller dataset, I set up GCP Dataproc to process the larger dataset using the same code.
-
-This project enhanced my understanding of GCP tools, PySpark, and machine learning workflows, showcasing my ability to troubleshoot and adapt to challenges in a cloud-based environment.
+This project strengthened my skills in cloud-based machine learning, PySpark, and troubleshooting data issues in a distributed environment.
 
